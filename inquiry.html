@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectTest | 문의사항</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <link rel="icon" type="image/png" href="assets/img/comm/logo.ico">
+    <link rel="stylesheet" href="assets/plugin/aos/aos.css" />
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.responsive.css">
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/plugin/aos/aos.js"></script>
+</head>
+
+<body ontouchstart>
+<main id="app" class="app-blue app-subpage-type">
+    <header id="header" class="header top">
+        <div class="header-inner flex flex-ac flex-jsb">
+            <h1 class="logo">
+                <a href="./">
+                    <img id="logo-img" class="logo-img" src="assets/img/comm/logo-white.svg" alt="로고"/>
+                </a>
+            </h1>
+            <div class="header-inner-wrap flex flex-jsb">
+                <button type="button" id="mobile-header-nav-btn" class="btn mobile-header-nav-btn mb-show">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="txt-hidden">모바일 메뉴 열기</span>
+                </button>
+
+                <div class="header-gnb-wrap flex flex-jsb">
+                    <nav class="header-menu-btns flex flex-ac flex-jsb">
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">고객현황</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">고객관리</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">문체관리</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">문항등록</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">문항조합</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">패키지조합</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">공지사항</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./inquiry.html" class="link">문의사항</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">사용자관리</a>
+                        </div>
+                    </nav>
+
+                    <div class="header-user-wrap flex flex-jsb">
+                        <a class="search-btn">
+                            <img src="./assets/img/icon/ico-search-wh.svg" alt="검색 아이콘"/>
+                        </a>
+                        <div class="user-name-wrap flex">
+                            <span class="user-name">홍길동</span>
+                            <span>님</span>
+                        </div>
+                        <div class="login-out-wrap">
+                            <a class="logout-btn">
+                                로그아웃
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="subpage-sec" class="subpage-sec bbs-sec sec">
+        <div class="cont-wrap">
+            <h2>문의사항</h2>
+            <div class="page-info-wrap flex flex-jsb">
+                <p class="page-info">총 <span class="total-count">6</span>개의 문의사항이 있습니다.</p>
+
+                <div class="sort-wrap">
+                    <a class="sort-btn flex flex-jfs">
+                        <span class="sort-value-txt">20개 씩</span>
+                            <span class="arrow">
+                            <img src="./assets/img/icon/ico-arrow-bottom-gray.svg" alt="화살표"/>
+                        </span>
+                    </a>
+
+                    <div class="absol sort-list">
+                        <a class="sort-value" data-sort="20">
+                            20개
+                        </a>
+                        <a class="sort-value" data-sort="50">
+                            50개
+                        </a>
+                        <a class="sort-value" data-sort="100">
+                            100개
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bbs-wrap type-faq">
+                <div class="bbs-list">
+                    <div class="bbs bbs-head">
+                        <div class="bbs-head-wrap flex flex-ac flex-jsb">
+                            <div class="item number">번호</div>
+                            <div class="item category">문의 종류</div>
+                            <div class="item company">회사명</div>
+                            <div class="item subject">제목</div>
+                            <div class="item manager">담당자</div>
+                            <div class="item tel">전화번호</div>
+                            <div class="item mail">이메일</div>
+                            <div class="item date">게시일</div>
+                            <div class="item bbs-status">답변상태</div>
+                        </div>
+                    </div>
+                    <div class="bbs new">
+                        <div class="question flex flex-ac flex-jsb">
+                            <div class="item number">6</div>
+                            <div class="item category">시스템 관련</div>
+                            <div class="item company">에버랜드</div>
+                            <div class="item subject flex flex-jl flex-ac">
+                                <span class="txt">고객 현황 문의</span>
+                                <tag class="new">NEW</tag>
+                            </div>
+                            <div class="item manager">홍길동</div>
+                            <div class="item tel">010-1234-5678</div>
+                            <div class="item mail">gildong@gmail.com</div>
+                            <div class="item date">2024-06-27 11:06</div>
+                            <div class="item bbs-status">대기중</div>
+                        </div>
+                        <div class="answer">
+                            <div class="inner">
+                                <div class="desc content">
+                                    담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?
+                                </div>
+                                <div class="reply-wrap">
+                                    <form class="form-wrap" name="replayForm" action="./inquiry.html" onsubmit="return bbs_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                                        <input type="hidden" name="mode" value="reg"/>
+                                        <div class="control-wrap flex flex-jsb flex-ac">
+                                            <h4 class="title flex flex-ac">
+                                                답변 등록
+                                            </h4>
+                                            <button type="submit" class="reply-btn submit-btn btn">
+                                                답변 등록
+                                            </button>
+                                        </div>
+                                        <div class="input-container">
+                                            <div class="input-wrap">
+                                                <textarea class="reply-contents" type="text" name="content" placeholder="답변을 등록해주세요" required="required"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bbs">
+                        <div class="question flex flex-ac flex-jsb">
+                            <div class="item number">5</div>
+                            <div class="item category">기타</div>
+                            <div class="item company">슈피겐코리아</div>
+                            <div class="item subject flex flex-jl flex-ac">
+                                <span class="txt">[슈피겐코리아] Select Test 플랫폼 담당자 인원수 문의 및 문항 조합 관련 문의</span>
+                            </div>
+                            <div class="item manager">홍길동</div>
+                            <div class="item tel">010-1234-5678</div>
+                            <div class="item mail">gildong@gmail.com</div>
+                            <div class="item date">2024-06-27 11:06</div>
+                            <div class="item bbs-status">대기중</div>
+                        </div>
+                        <div class="answer">
+                            <div class="inner">
+                                <div class="desc content">
+                                    담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?
+                                </div>
+                                <div class="reply-wrap">
+                                    <form class="form-wrap" name="replayForm" action="./inquiry.html" onsubmit="return bbs_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                                        <input type="hidden" name="mode" value="reg"/>
+                                        <div class="control-wrap flex flex-jsb flex-ac">
+                                            <h4 class="title flex flex-ac">
+                                                답변 등록
+                                            </h4>
+                                            <button type="submit" class="reply-btn submit-btn btn">
+                                                답변 등록
+                                            </button>
+                                        </div>
+                                        <div class="input-container">
+                                            <div class="input-wrap">
+                                                <textarea class="reply-contents" type="text" name="content" placeholder="답변을 등록해주세요" required="required"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bbs">
+                        <div class="question flex flex-ac flex-jsb">
+                            <div class="item number">4</div>
+                            <div class="item category">문항 관련</div>
+                            <div class="item company">120다산콜재단</div>
+                            <div class="item subject flex flex-jl flex-ac">
+                                <span class="txt">문항 질문</span>
+                            </div>
+                            <div class="item manager">김지우</div>
+                            <div class="item tel">010-1234-5678</div>
+                            <div class="item mail">gw@gmail.com</div>
+                            <div class="item date">2024-06-05 13:06</div>
+                            <div class="item bbs-status complete">답변완료</div>
+                        </div>
+                        <div class="answer">
+                            <div class="inner">
+                                <div class="desc content">
+                                    담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?
+                                </div>
+                                <div class="reply-wrap complete">
+                                    <form class="form-wrap" name="replayForm" action="./inquiry.html" onsubmit="return bbs_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                                        <input type="hidden" name="mode" value="update"/>
+                                        <input type="hidden" name="type" value="read"/>
+                                        <div class="control-wrap flex flex-jsb flex-ac">
+                                            <h4 class="title flex flex-ac">
+                                                답변 등록 <span class="date">2024-06-27 11:00</span>
+                                            </h4>
+                                            <button type="submit" class="reply-btn reply-update-btn submit-btn btn">
+                                                답변 수정
+                                            </button>
+                                        </div>
+                                        <div class="contents-wrap">
+                                            <textarea class="reply-contents type-text" type="text" name="content" required="required" readonly="readonly">
+안녕하세요, 관리자입니다.
+
+담당자 등록은 최대 3명까지 가능합니다. 추가로 인원을 등록하게 될 경우 문의하기 게시판을 통해 알려주세요. 따로 추가비용은 발생하지 않습니다.
+                                            </textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bbs">
+                        <div class="question flex flex-ac flex-jsb">
+                            <div class="item number">3</div>
+                            <div class="item category">기타</div>
+                            <div class="item company">인천 공항에너지</div>
+                            <div class="item subject flex flex-jl flex-ac">
+                                <span class="txt">담당자 등록 관련</span>
+                            </div>
+                            <div class="item manager">김철수</div>
+                            <div class="item tel">010-1234-5678</div>
+                            <div class="item mail">kcs@gmail.com</div>
+                            <div class="item date">2024-05-03 14:06</div>
+                            <div class="item bbs-status complete">답변완료</div>
+                        </div>
+                        <div class="answer">
+                            <div class="inner">
+                                <div class="desc content">
+                                    담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?
+                                </div>
+                                <div class="reply-wrap complete">
+                                    <form class="form-wrap" name="replayForm" action="./inquiry.html" onsubmit="return bbs_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                                        <input type="hidden" name="mode" value="update"/>
+                                        <input type="hidden" name="type" value="read"/>
+                                        <div class="control-wrap flex flex-jsb flex-ac">
+                                            <h4 class="title flex flex-ac">
+                                                답변 등록 <span class="date">2024-06-27 11:00</span>
+                                            </h4>
+                                            <button type="submit" class="reply-btn reply-update-btn submit-btn btn">
+                                                답변 수정
+                                            </button>
+                                        </div>
+                                        <div class="contents-wrap">
+                                            <textarea class="reply-contents type-text" type="text" name="content" required="required" readonly="readonly">
+안녕하세요, 관리자입니다.
+
+담당자 등록은 최대 3명까지 가능합니다. 추가로 인원을 등록하게 될 경우 문의하기 게시판을 통해 알려주세요. 따로 추가비용은 발생하지 않습니다.
+                                            </textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bbs">
+                        <div class="question flex flex-ac flex-jsb">
+                            <div class="item number">2</div>
+                            <div class="item category">시스템 관련</div>
+                            <div class="item company">전북특별자치도 교통문화연수원</div>
+                            <div class="item subject flex flex-jl flex-ac">
+                                <span class="txt">공지사항 노출 문의</span>
+                            </div>
+                            <div class="item manager">박영수</div>
+                            <div class="item tel">010-1234-5678</div>
+                            <div class="item mail">pys@gmail.com</div>
+                            <div class="item date">2024-05-01 12:06</div>
+                            <div class="item bbs-status complete">답변완료</div>
+                        </div>
+                        <div class="answer">
+                            <div class="inner">
+                                <div class="desc content">
+                                    담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?
+                                </div>
+                                <div class="reply-wrap complete">
+                                    <form class="form-wrap" name="replayForm" action="./inquiry.html" onsubmit="return bbs_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                                        <input type="hidden" name="mode" value="update"/>
+                                        <input type="hidden" name="type" value="read"/>
+                                        <div class="control-wrap flex flex-jsb flex-ac">
+                                            <h4 class="title flex flex-ac">
+                                                답변 등록 <span class="date">2024-06-27 11:00</span>
+                                            </h4>
+                                            <button type="submit" class="reply-btn reply-update-btn submit-btn btn">
+                                                답변 수정
+                                            </button>
+                                        </div>
+                                        <div class="contents-wrap">
+                                            <textarea class="reply-contents type-text" type="text" name="content" required="required" readonly="readonly">
+안녕하세요, 관리자입니다.
+
+담당자 등록은 최대 3명까지 가능합니다. 추가로 인원을 등록하게 될 경우 문의하기 게시판을 통해 알려주세요. 따로 추가비용은 발생하지 않습니다.
+                                            </textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bbs">
+                        <div class="question flex flex-ac flex-jsb">
+                            <div class="item number">1</div>
+                            <div class="item category">기타</div>
+                            <div class="item company">한국수산자원공단</div>
+                            <div class="item subject flex flex-jl flex-ac">
+                                <span class="txt">담당자 권한 설정 문의</span>
+                            </div>
+                            <div class="item manager">홍길동</div>
+                            <div class="item tel">010-1234-5678</div>
+                            <div class="item mail">0hee@gmail.com</div>
+                            <div class="item date">2024-01-12 11:00</div>
+                            <div class="item bbs-status complete">답변완료</div>
+                        </div>
+                        <div class="answer">
+                            <div class="inner">
+                                <div class="desc content">
+                                    담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?담당자 등록 인원이 몇 명까지 가능한지 알고싶습니다. 만약 인원을 추가로 등록하게 된다면 비용이 추가될까요?
+                                </div>
+                                <div class="reply-wrap complete">
+                                    <form class="form-wrap" name="replayForm" action="./inquiry.html" onsubmit="return bbs_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                                        <input type="hidden" name="mode" value="update"/>
+                                        <input type="hidden" name="type" value="read"/>
+                                        <div class="control-wrap flex flex-jsb flex-ac">
+                                            <h4 class="title flex flex-ac">
+                                                답변 등록 <span class="date">2024-06-27 11:00</span>
+                                            </h4>
+                                            <button type="submit" class="reply-btn reply-update-btn submit-btn btn">
+                                                답변 수정
+                                            </button>
+                                        </div>
+                                        <div class="contents-wrap">
+                                            <textarea class="reply-contents type-text" type="text" name="content" required="required" readonly="readonly">
+안녕하세요, 관리자입니다.
+
+담당자 등록은 최대 3명까지 가능합니다. 추가로 인원을 등록하게 될 경우 문의하기 게시판을 통해 알려주세요. 따로 추가비용은 발생하지 않습니다.
+                                            </textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+<!-- 실행 스크립트 -->
+<script src="assets/js/ui.js"></script>
+</body>
+
+</html>

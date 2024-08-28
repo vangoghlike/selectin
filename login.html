@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectTest | 로그인</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <link rel="icon" type="image/png" href="assets/img/comm/logo.ico">
+    <link rel="stylesheet" href="assets/plugin/aos/aos.css" />
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.responsive.css">
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/plugin/aos/aos.js"></script>
+</head>
+
+<body ontouchstart>
+<main id="app" class="app-white app-login-type">
+    <section id="login-sec" class="login-sec sec">
+        <div class="cont-wrap flex flex-ac flex-jc">
+            <div class="login-wrap user-check-form">
+                <div class="inner">
+                    <h4 class="tac">
+                        <img src="assets/img/comm/logo.svg" alt="로고"/>
+                    </h4>
+                    <form class="form-wrap" name="loginForm" action="./password.change.html" onsubmit="return login(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                        <div class="input-container">
+                            <div class="input-wrap iw1 type1">
+                                <input class="item" type="text" name="user_id" maxlength="12" placeholder="아이디" required="required" data-type="user_id">
+                                <span class="ip-txt">아이디</span>
+                            </div>
+                            <div class="input-wrap iw2 type1">
+                                <input class="item" type="password" name="user_password" maxlength="12" placeholder="비밀번호" required="required">
+                                <span class="ip-txt">비밀번호</span>
+                            </div>
+                        </div>
+                        <div class="login-set-wrap flex flex-ac">
+                            <label class="login-set-lb flex flex-ac">
+                                <input type="checkbox" name="auto_login">
+                                <span>자동 로그인</span>
+                            </label>
+                            <label class="login-set-lb flex flex-ac">
+                                <input type="checkbox" name="save_id">
+                                <span>아이디 저장</span>
+                            </label>
+                        </div>
+                        <div class="form-btn-wrap flex flex-ac flex-jsb">
+                            <button type="submit" id="login-btn" class="login-btn submit-btn btn">
+                                로그인
+                            </button>
+                        </div>
+                        <a target="_self" href="./password.find.html" id="password-find-btn" class="password-find-btn btn">
+                            비밀번호 찾기
+                        </a>
+                    </form>
+
+                    <div class="add-info-wrap tac">
+                        <h5 class="add-info-title">Select Test 에 대해 궁금하다면?</h5>
+
+                        <p class="add-info-href" >
+                            <img src="assets/img/icon/ico-warning-blue.svg" alt="i"/>
+                            <a href="">
+                            Select Test 알아보기
+                            </a>
+                        </p>
+                        <p class="add-info-txt">
+                            등록되지 않은 IP는 접속이 제한됩니다.
+                        </p>
+                        <p class="add-info-ip-txt">
+                            IP <span id="user-ip" class="user-ip">192.168.0.1</span> 접근
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <iframe id="acIframe" class="hidden-iframe" name="acIframe"></iframe>
+
+</main>
+<!-- 실행 스크립트 -->
+<script src="assets/js/ui.js"></script>
+<script>
+    $(function(){
+        // ip find
+        // $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+        //     function(json) {
+        //         $('#user-ip').text(json.ip);
+        //     }
+        // );
+    });
+</script>
+<script type="text/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
+</body>
+
+</html>

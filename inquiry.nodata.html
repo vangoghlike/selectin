@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectTest | 문의사항</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <link rel="icon" type="image/png" href="assets/img/comm/logo.ico">
+    <link rel="stylesheet" href="assets/plugin/aos/aos.css" />
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.responsive.css">
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/plugin/aos/aos.js"></script>
+</head>
+
+<body ontouchstart>
+<main id="app" class="app-blue app-subpage-type">
+    <header id="header" class="header top">
+        <div class="header-inner flex flex-ac flex-jsb">
+            <h1 class="logo">
+                <a href="./">
+                    <img id="logo-img" class="logo-img" src="assets/img/comm/logo-white.svg" alt="로고"/>
+                </a>
+            </h1>
+            <div class="header-inner-wrap flex flex-jsb">
+                <button type="button" id="mobile-header-nav-btn" class="btn mobile-header-nav-btn mb-show">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="txt-hidden">모바일 메뉴 열기</span>
+                </button>
+
+                <div class="header-gnb-wrap flex flex-jsb">
+                    <nav class="header-menu-btns flex flex-ac flex-jsb">
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">고객현황</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">고객관리</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">문체관리</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">문항등록</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">문항조합</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">패키지조합</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">공지사항</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./inquiry.html" class="link">문의사항</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">사용자관리</a>
+                        </div>
+                    </nav>
+
+                    <div class="header-user-wrap flex flex-jsb">
+                        <a class="search-btn">
+                            <img src="./assets/img/icon/ico-search-wh.svg" alt="검색 아이콘"/>
+                        </a>
+                        <div class="user-name-wrap flex">
+                            <span class="user-name">홍길동</span>
+                            <span>님</span>
+                        </div>
+                        <div class="login-out-wrap">
+                            <a class="logout-btn">
+                                로그아웃
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="subpage-sec" class="subpage-sec bbs-sec sec">
+        <div class="cont-wrap">
+            <h2>문의사항</h2>
+            <div class="page-info-wrap flex flex-jsb">
+                <p class="page-info">총 <span class="total-count">0</span>개의 문의사항이 있습니다.</p>
+
+                <div class="sort-wrap">
+                    <a class="sort-btn flex flex-jfs">
+                        <span class="sort-value-txt">20개 씩</span>
+                        <span class="arrow">
+                            <img src="./assets/img/icon/ico-arrow-bottom-gray.svg" alt="화살표"/>
+                        </span>
+                    </a>
+
+                    <div class="absol sort-list">
+                        <a class="sort-value" data-sort="20">
+                            20개
+                        </a>
+                        <a class="sort-value" data-sort="50">
+                            50개
+                        </a>
+                        <a class="sort-value" data-sort="100">
+                            100개
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bbs-wrap">
+                <div class="bbs nodata tac">
+                    조회된 내용이 없습니다.
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- 실행 스크립트 -->
+<script src="assets/js/ui.js"></script>
+</body>
+
+</html>
