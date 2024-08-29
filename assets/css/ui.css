@@ -197,6 +197,11 @@ a:hover {
     flex-direction: column;
 }
 
+/* round */
+.round {
+    border-radius: 10px;
+}
+
 /* overflow */
 .of-y-h {
     overflow-y: hidden;
@@ -206,6 +211,16 @@ a:hover {
 }
 .of-h {
     overflow: hidden;
+}
+
+/* main bg */
+main.app-gray-bg {
+    background: #f8f8f8;
+}
+
+/* border */
+.border-bottom {
+    border-bottom: 1px solid #DBDBDB;
 }
 
 /* header */
@@ -324,6 +339,9 @@ header.top .mobile-header-nav-btn span {
     background-color: #fff;
 }
 header.scroll .mobile-header-nav-btn span {
+    background-color: #fff;
+}
+header.scroll .mobile-header-nav-btn.active span {
     background-color: #1E1E1E;
 }
 .app-blue header.top .mobile-header-nav-btn span {

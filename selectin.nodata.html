@@ -82,40 +82,38 @@
 
             <div class="selectin-wrap siw siw1 round">
                 <div class="inner-wrap">
-                    <h3 class="title flex flex-afe border-bottom">
-                        고객사 정보 <span class="si-txt">본 계정은 Select IN (채용평가솔루션)과 연동되었습니다.</span>
+                    <h3 class="title border-bottom">
+                        고객사 정보
                     </h3>
                     <div class="inner">
                         <form class="form-wrap" name="selectINForm" action="./selectin.nodata.html" onsubmit="return select_in_key(this);" method="post" enctype="multipart/form-data" autocomplete="off">
-                            <input type="hidden" name="select_status" value="0"/>
+                            <input type="hidden" name="select_status" value="1"/>
                             <div class="input-container flex">
                                 <div class="input-wrap">
                                     <label class="ip-lb flex flex-ac">
                                         <span class="lb-txt">회사 정보</span>
-                                        <input class="item" type="text" name="c_name" value="한국직무능력평가연구소" readonly="readonly"/>
+                                        <input class="item" type="text" name="c_name" readonly="readonly"/>
                                     </label>
                                 </div>
                                 <div class="input-wrap">
                                     <label class="ip-lb flex flex-ac">
                                         <span class="lb-txt">회사 코드</span>
-                                        <input class="item" type="text" name="c_code" value="KVAI" readonly="readonly"/>
+                                        <input class="item" type="text" name="c_code" readonly="readonly"/>
                                     </label>
                                 </div>
                                 <div class="input-wrap">
                                     <label class="ip-lb flex flex-ac">
                                         <span class="lb-txt">Select IN 마스터 관리자 메일</span>
-                                        <input class="item" type="text" name="si_manger_mail" value="gdhong@kvai.co.kr" readonly="readonly"/>
+                                        <input class="item" type="text" name="si_manger_mail" readonly="readonly"/>
                                     </label>
                                 </div>
                                 <div class="input-wrap">
                                     <label class="ip-lb flex flex-ac">
-                                        <span class="lb-txt flex flex-ac status-in">Select IN 연동 KEY
-                                            <img class="link-icon" src="./assets/img/icon/ico-link-green.svg" alt="링크 아이콘"/>
-                                        </span>
-                                        <div class="item ip-sikey">
-                                            <input class="item" type="text" name="si_key" value="KVAI-0724248234975345#" readonly="readonly"/>
+                                        <span class="lb-txt flex flex-ac">Select IN 연동 KEY</span>
+                                        <div class="item ip-sikey-unlink">
+                                            <input class="item" type="text" name="si_key" readonly="readonly"/>
                                         </div>
-                                        <button type="submit" id="selectin-link-btn" class="selectin-link-btn submit-btn btn">
+                                        <button type="submit" id="selectin-link-btn" class="selectin-link-btn disable-btn submit-btn btn" disabled="disabled">
                                             연동해제
                                         </button>
                                     </label>
@@ -129,7 +127,7 @@
 
             <div class="selectin-wrap siw siw2 round">
                 <div class="inner-wrap">
-                    <h3 class="title border-bottom">
+                    <h3 class="title flex flex-afe border-bottom">
                         고객사 담당 직원
                     </h3>
                     <p class="desc">
@@ -138,24 +136,23 @@
 
                     <div class="inner">
                         <form class="form-wrap" name="selectIN2Form">
-                            <input type="hidden" name="select-status" value="1"/>
                             <div class="input-container flex">
                                 <div class="input-wrap">
                                     <label class="ip-lb flex flex-ac">
                                         <span class="lb-txt">관리자 성명</span>
-                                        <input class="item" type="text" name="manger_name" value="홍길동" readonly="readonly"/>
+                                        <input class="item" type="text" name="manger_name" readonly="readonly"/>
                                     </label>
                                 </div>
                                 <div class="input-wrap">
                                     <label class="ip-lb flex flex-ac">
                                         <span class="lb-txt">관리자 회사 번호</span>
-                                        <input class="item" type="text" name="manger_tel" value="010-1111-2222" readonly="readonly"/>
+                                        <input class="item" type="text" name="manger_tel" readonly="readonly"/>
                                     </label>
                                 </div>
                                 <div class="input-wrap">
                                     <label class="ip-lb flex flex-ac">
                                         <span class="lb-txt">관리자 이메일</span>
-                                        <input class="item" type="text" name="manger_mail" value="gdhong@kvai.co.kr" readonly="readonly"/>
+                                        <input class="item" type="text" name="manger_mail" readonly="readonly"/>
                                     </label>
                                 </div>
                             </div>

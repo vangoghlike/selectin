@@ -158,6 +158,27 @@ function password_change(f) {
     }
 }
 
+// selectIN
+$selectIN_form = document.querySelector('form[name="selectINForm"]');
+$selectIN2_form = document.querySelector('form[name="selectIN2Form"]');
+if ( $selectIN_form ) {
+    let si_status = $selectIN_form.querySelector('input[name="select_status"]').value;
+    if ( si_status == 1 ) {
+        setTimeout(() => {
+            alert('본 계정은 Select IN(채용평가솔루션)과\n연동되어 있지 않습니다.\n연동 및 계약 관련 문의사항은\n고객사 담당직원에게 문의하시기 바랍니다.');
+        }, '1000');
+    }
+}
+
+function select_in_key(f) {
+    let unlink_agree = confirm('연동 해제 하시겠습니까?');
+    if (unlink_agree == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function bbs_write(f) {
     let alarm_msg;
     if (f.mode.value == 'update') {
@@ -188,7 +209,6 @@ if ( !($app.classList.contains('app-window-type') || $app.classList.contains('ap
 } else {
     init_loginPage();   // 최초 실행
 }
-
 
 function init_page(){
     $header_el = document.querySelector('#header');

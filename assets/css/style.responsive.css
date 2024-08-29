@@ -483,6 +483,63 @@
         height:180px;
     }
 
+    /* select in */
+    .selectin-wrap {
+        padding:32px 20px;
+    }
+    .selectin-wrap .title {
+        padding:0 0 8px 0;
+        font-size:20px;
+        flex-wrap: wrap;
+    }
+    .selectin-wrap .title .si-txt {
+        width: 100%;
+        font-size:12px;
+    }
+    .selectin-wrap.siw1 {
+        margin:0 auto 32px;
+    }
+    .selectin-wrap .desc {
+        font-size:12px;
+    }
+    .selectin-wrap .inner {
+        margin:20px auto 0;
+    }
+    .selectin-wrap .input-wrap .ip-lb {
+        flex-wrap: wrap;
+    }
+    .selectin-wrap .input-wrap .ip-lb .lb-txt {
+        padding:0 0 6px 0;
+        width: 100%;
+        font-size:14px;
+    }
+    .selectin-wrap .input-wrap .ip-lb .lb-txt.status-in {
+        gap:12px;
+    }
+    .selectin-wrap .input-wrap .ip-lb .lb-txt.status-in .link-icon {
+        width:16px;
+    }
+    .selectin-wrap .input-wrap input[type="text"] {
+        padding:8px 10px;
+        width:100%;
+        font-size:13px;
+    }
+    .selectin-wrap .input-wrap .ip-sikey {
+        width:calc(100% - 66px);
+    }
+    .selectin-wrap .input-wrap .ip-sikey:before {
+        left:8px;
+    }
+    .selectin-wrap .input-wrap .ip-sikey input[type="text"] {
+        padding-left:32px;
+    }
+    .selectin-wrap .selectin-link-btn {
+        margin-left:2px;
+        width:64px;
+        font-size:12px;
+    }
+
+
 
     .subpage-sec .sort-btn {
         font-size:12px;
