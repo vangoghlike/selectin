@@ -302,6 +302,8 @@ function removeActiveClasses() {
 $logout_btn = document.querySelector('.logout-btn');
 $sort_btn = document.querySelector('.sort-btn');
 $sortVal_btn = document.querySelectorAll('.sort-list a');
+$inquiryPop_btn = document.querySelector('.inquiry-pop-btn');
+
 $applyChk_btn = document.querySelectorAll('.apply-check-btn');
 $applyProgress_btn = document.querySelector('.apply-progress-btn');
 $aConfirm_btn = document.querySelector('.a-confirm-btn');
@@ -312,6 +314,15 @@ $allPop = document.querySelectorAll('.pop-layer');
 $applyChk_pop = document.querySelector('.apply-check-pop');
 $applyLogin_pop = document.querySelector('.apply-login-pop');
 $applyNoti_pop = document.querySelector('.apply-notification-pop');
+
+
+$inquiryReg_pop = document.querySelector('.pop-inquiry-reg');
+$inquiryReg_pop_close = document.querySelector('.pop-inquiry-reg .close-btn');
+if ( $inquiryReg_pop_close ) {
+    $inquiryReg_pop_close.addEventListener('click', () => {
+        closePop();
+    });
+}
 
 if ( $logout_btn ) {
     $logout_btn.addEventListener('click', () => {
@@ -337,6 +348,19 @@ if ( $sortVal_btn ) {
         });
     });
 }
+if ( $inquiryPop_btn ) {
+    $inquiryPop_btn.addEventListener('click', () => {
+        $inquiryReg_pop.classList.toggle('view');
+        setDeepBg();
+    });
+}
+
+function inquiry_write(f) {
+    alert('문의가 등록되었습니다.');
+    return true;
+}
+
+
 if ( $applyChk_btn ) {
     $applyChk_btn.forEach((btn) => {
         btn.addEventListener('click', () => {

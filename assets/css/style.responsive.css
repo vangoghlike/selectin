@@ -541,8 +541,14 @@
 
 
 
+    .page-info-wrap {
+    }
     .subpage-sec .sort-btn {
+        gap:4px;
         font-size:12px;
+    }
+    .subpage-sec .sort-btn:hover {
+        text-decoration: unset;
     }
     .subpage-sec .sort-btn .arrow {
         width:12px;
@@ -550,6 +556,11 @@
     .subpage-sec .sort-list a {
         padding:4px 8px;
         font-size:12px;
+    }
+    .subpage-sec .inquiry-pop-btn {
+        margin-left:8px;
+        width:72px;
+        font-size:11px;
     }
 
     .card-information-wrap {
@@ -893,6 +904,75 @@
         width: 100%;
         max-width: 220px;
         font-size: 14px;
+    }
+
+    .pop-inquiry-reg {
+
+    }
+    .pop-inquiry-reg .inner {
+        padding:20px;
+        max-height: calc(100vh - 48px);
+    }
+    .pop-inquiry-reg .inner h4 {
+        margin:0 auto 18px;
+        font-size:16px;
+    }
+    .pop-inquiry-reg .inner .close-btn {
+        top:20px;
+        right:20px;
+        width:16px;
+        height:16px;
+    }
+    .pop-inquiry-reg .inner .close-btn:hover {
+        box-shadow:unset;
+    }
+    .pop-inquiry-reg .inner .content {
+        padding:0;
+        max-height:calc(100vh - (48px * 2) - 60px);
+    }
+    .pop-inquiry-reg .inner .form-wrap {
+        margin:0 auto;
+    }
+    .pop-inquiry-reg .inner .form-wrap .submit-wrap {
+        margin:12px auto 0;
+    }
+    .pop-inquiry-reg .inner .form-wrap .input-wrap {
+        gap:8px;
+        margin:0 auto 12px;
+    }
+    .pop-inquiry-reg .inner .form-wrap .input-wrap.iw2 {
+        margin:0 auto 16px;
+    }
+    .pop-inquiry-reg .inner .form-wrap .input-wrap.iw2 input.full-type {
+        width:100%;
+        max-width: 100%;
+        height:48px;
+    }
+    .pop-inquiry-reg .inner .form-wrap .ip-txt {
+        padding-left:0;
+        padding-right:12px;
+        font-size:14px;
+    }
+    .pop-inquiry-reg .inner .form-wrap .ip-lb {
+        gap:4px;
+        font-size:13px;
+    }
+    .pop-inquiry-reg .inner .form-wrap .contents-wrap textarea {
+        height:360px;
+    }
+    .pop-inquiry-reg .inner .form-wrap .inquiry-reg-btn {
+        width:64px;
+        height: 32px;
+        border-radius: 4px;
+        color:#fff;
+        font-weight: bold;
+        font-size:14px;
+        background: #3B68D7;
+    }
+    .pop-inquiry-reg .inner .form-wrap .inquiry-reg-btn:hover {
+        text-decoration: unset;
+        background: #0834a1;
+        color: #fff;
     }
 }
 

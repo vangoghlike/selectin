@@ -91,7 +91,7 @@
                 <div class="sort-wrap">
                     <a class="sort-btn flex flex-jfs">
                         <span class="sort-value-txt">20개 씩</span>
-                            <span class="arrow">
+                        <span class="arrow">
                             <img src="./assets/img/icon/ico-arrow-bottom-gray.svg" alt="화살표"/>
                         </span>
                     </a>
@@ -108,6 +108,9 @@
                         </a>
                     </div>
                 </div>
+                <a class="btn inquiry-pop-btn">
+                    문의사항 등록
+                </a>
             </div>
 
 
@@ -389,6 +392,50 @@
             </div>
         </div>
     </section>
+
+
+    <div class="pop-inquiry-reg pop-layer">
+        <div class="inner">
+            <h4 class="tal">문의사항 등록</h4>
+            <a class="close-btn btn">
+                <img src="assets/img/icon/ico-close-gray.svg" alt="닫기"/>
+            </a>
+            <div class="content">
+                <form class="form-wrap" name="inquiryForm" action="./inquiry.level.html" onsubmit="return inquiry_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <input type="hidden" name="type" value="read"/>
+                    <div class="input-wrap flex flex-ac">
+                        <span class="ip-txt">
+                            문의 종류
+                        </span>
+                        <label class="ip-lb flex flex-ac">
+                            <input class="item" type="radio" name="category" value="시스템 관련" checked="checked"/>
+                            <span class="lb-txt">시스템 관련</span>
+                        </label>
+                        <label class="ip-lb flex flex-ac">
+                            <input class="item" type="radio" name="category" value="문항 관련"/>
+                            <span class="lb-txt">문항 관련</span>
+                        </label>
+                        <label class="ip-lb flex flex-ac">
+                            <input class="item" type="radio" name="category" value="기타"/>
+                            <span class="lb-txt">기타</span>
+                        </label>
+                    </div>
+                    <div class="input-wrap iw2">
+                        <input class="item full-type" type="text" name="subject" placeholder="제목" required="required"/>
+                    </div>
+                    <div class="contents-wrap">
+                        <textarea class="contents" type="text" name="content" required="required"></textarea>
+                    </div>
+                    <div class="submit-wrap flex flex-jr">
+                        <button class="inquiry-reg-btn submit-btn btn" type="submit">
+                            저장
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="deep-bg"></div>
 </main>
 <!-- 실행 스크립트 -->
 <script src="assets/js/ui.js"></script>

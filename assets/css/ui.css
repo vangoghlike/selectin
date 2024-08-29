@@ -45,6 +45,10 @@ input[type="checkbox"] {
     border:1px solid #ababab;
     border-radius: 2px;
 }
+input[type="radio"] {
+    width:16px;
+    height:16px;
+}
 textarea {
     padding:8px 20px;
     width:100%;
