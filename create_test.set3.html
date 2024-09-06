@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>selectTest | Select IN 연동</title>
+    <title>selectTest | 검사 생성</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
     <link rel="icon" type="image/png" href="assets/img/comm/logo.ico">
     <link rel="stylesheet" href="assets/plugin/aos/aos.css" />
@@ -16,7 +16,7 @@
 </head>
 
 <body ontouchstart>
-<main id="app" class="app-gray app-subpage-type">
+<main id="app" class="app-blue app-subpage-type app-gray-bg">
     <header id="header" class="header top">
         <div class="header-inner flex flex-ac flex-jsb">
             <h1 class="logo">
@@ -35,57 +35,287 @@
                 <div class="header-gnb-wrap flex flex-jsb">
                     <nav class="header-menu-btns flex flex-ac flex-jsb">
                         <div class="header-menu-btn">
-                            <a href="./" class="link">고객현황</a>
+                            <a href="./" class="link">검사현황</a>
                         </div>
                         <div class="header-menu-btn">
-                            <a href="./" class="link">고객관리</a>
-                        </div>
-                        <div class="header-menu-btn">
-                            <a href="./" class="link">문체관리</a>
-                        </div>
-                        <div class="header-menu-btn">
-                            <a href="./" class="link">문항등록</a>
-                        </div>
-                        <div class="header-menu-btn">
-                            <a href="./" class="link">문항조합</a>
-                        </div>
-                        <div class="header-menu-btn">
-                            <a href="./" class="link">패키지조합</a>
+                            <a href="./" class="link">검사생성</a>
                         </div>
                         <div class="header-menu-btn">
                             <a href="./" class="link">공지사항</a>
                         </div>
                         <div class="header-menu-btn">
-                            <a href="./" class="link">문의사항</a>
+                            <a href="./" class="link">IN 연동</a>
                         </div>
                         <div class="header-menu-btn">
-                            <a href="./" class="link">사용자관리</a>
+                            <a href="./inquiry.html" class="link">문의사항</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">화면설정</a>
+                        </div>
+                        <div class="header-menu-btn">
+                            <a href="./" class="link">응시화면</a>
                         </div>
                     </nav>
-                </div>
 
-                <div class="header-user-wrap flex flex-jsb">
-                    <a class="search-btn">
-                        <img src="./assets/img/icon/ico-search-wh.svg" alt="검색 아이콘"/>
-                    </a>
-                    <div class="user-name-wrap flex">
-                        <span class="user-name">홍길동</span>
-                        <span>님</span>
-                    </div>
-                    <div class="login-out-wrap">
-                        로그아웃
+                    <div class="header-user-wrap flex flex-jsb">
+                        <a class="search-btn">
+                            <img src="./assets/img/icon/ico-search-wh.svg" alt="검색 아이콘"/>
+                        </a>
+                        <div class="user-name-wrap flex">
+                            <span class="user-name">한국발명진흥회 홍길동</span>
+                            <span>님</span>
+                        </div>
+                        <div class="login-out-wrap">
+                            <a class="logout-btn">
+                                로그아웃
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="subpage-sec" class="subpage-sec si-sec sec">
+    <section id="subpage-sec" class="subpage-sec create-test-sec sec">
         <div class="cont-wrap">
+            <h2>검사 생성</h2>
 
+            <div class="tab-wrap flex flex-jfs">
+                <a class="btn tab-btn">기본 설정</a>
+                <a class="btn tab-btn">검사 설정</a>
+                <a class="btn tab-btn active">대상자 설정</a>
+            </div>
+            <div class="create-test-wrap">
+                <div class="inner-wrap">
+                    <h3 class="title">
+                        대상자 설정
+                    </h3>
+                    <div class="add-txt">
+                        검사를 진행하는 대상자를 설정합니다.
+                    </div>
+
+                    <form class="form-wrap" name="test1Form" action="./selectin.nodata.html" onsubmit="return crete_test3_write(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+                        <div class="input-container flex flex-fww full-type">
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-ac">
+                                    <div class="lb-txt flex flex-ac">
+                                        검사 설정
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <label class="ip-con-lb flex flex-jfs flex-ac">
+                                            <input class="item" type="radio" name="" value="일반검사"/>
+                                            <span class="ip-txt">일반검사</span>
+                                        </label>
+                                        <label class="ip-con-lb flex flex-jfs flex-ac">
+                                            <input class="item" type="radio" name="" value="동시검사"/>
+                                            <span class="ip-txt">동시검사</span>
+                                        </label>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-afs">
+                                    <div class="lb-txt flex flex-ac">
+                                        모니터링 설정
+                                    </div>
+                                    <div class="ip-content">
+                                        <div class="con-inner flex flex-ac flex-g20">
+                                            <label class="ip-con-lb flex flex-ac flex-g20">
+                                                <input class="item" type="checkbox" name="" value="0"/>
+                                                <span class="ip-txt">자동 채점 사용</span>
+                                            </label>
+                                        </div>
+                                        <div class="con-inner hidden">
+                                            <div class="blue-wrap flex flex-ac flex-g20">
+                                                <label class="ip-con-lb flex flex-ac flex-g20">
+                                                    <input class="item" type="checkbox" name="" value="0"/>
+                                                    <span class="ip-txt">정면 모니터링</span>
+                                                </label>
+                                                <label class="ip-con-lb flex flex-ac flex-g20">
+                                                    <input class="item" type="checkbox" name="" value="0"/>
+                                                    <span class="ip-txt">측면 모니터링</span>
+                                                </label>
+                                                <label class="ip-con-lb flex flex-ac flex-g20">
+                                                    <input class="item" type="checkbox" name="" value="0"/>
+                                                    <span class="ip-txt">화면 모니터링</span>
+                                                </label>
+                                                <label class="ip-con-lb flex flex-ac flex-g20">
+                                                    <input class="item" type="checkbox" name="" value="0"/>
+                                                    <span class="ip-txt">응시자 채팅</span>
+                                                </label>
+                                                <label class="ip-con-lb flex flex-ac flex-g20">
+                                                    <input class="item" type="checkbox" name="" value="0"/>
+                                                    <span class="ip-txt">감독관 채팅</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-ac">
+                                    <div class="lb-txt flex flex-ac">
+                                        진행 방식
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <select class="item">
+                                            <option>선택</option>
+                                        </select>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-ac">
+                                    <div class="lb-txt flex flex-ac">
+                                        검사명
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <input class="item w520" type="text" name="" placeholder="검사명(윗 줄)을 입력해 주세요."/>
+                                        <input class="item w520" type="text" name="" placeholder="검사명(아래 줄)을 입력해 주세요."/>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-ac">
+                                    <div class="lb-txt flex flex-ac">
+                                        자동 채첨
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <label class="ip-con-lb flex flex-jfs flex-ac">
+                                            <input class="item" type="checkbox" name="" value="0"/>
+                                            <span class="ip-txt">자동 채점 사용</span>
+                                        </label>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap hidden">
+                                <label class="ip-lb flex flex-ac">
+                                    <div class="lb-txt flex flex-ac">
+                                        얼굴 등록 시작 일시
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <label class="ip-con-lb flex flex-jfs flex-ac">
+                                            <input class="item" type="date" name="" value="0"/>
+                                            <select class="item" >
+                                                <option>00시</option>
+                                            </select>
+                                            <select class="item" >
+                                                <option>00분</option>
+                                            </select>
+                                        </label>
+                                        <span>~</span>
+                                        <label class="ip-con-lb flex flex-jfs flex-ac">
+                                            <input class="item" type="date" name="" value="0"/>
+                                            <select class="item" >
+                                                <option>00시</option>
+                                            </select>
+                                            <select class="item" >
+                                                <option>00분</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-afs">
+                                    <div class="lb-txt flex flex-ac">
+                                        시간 설정
+                                    </div>
+                                    <div class="ip-content">
+                                        <div class="con-inner flex flex-ac flex-g20">
+                                            <label class="ip-con-lb flex flex-jfs flex-ac">
+                                                <input class="item" type="date" name="" value="0"/>
+                                                <select class="item" >
+                                                    <option>00시</option>
+                                                </select>
+                                                <select class="item" >
+                                                    <option>00분</option>
+                                                </select>
+                                            </label>
+                                            <span>~</span>
+                                            <label class="ip-con-lb flex flex-jfs flex-ac">
+                                                <input class="item" type="date" name="" value="0"/>
+                                                <select class="item" >
+                                                    <option>00시</option>
+                                                </select>
+                                                <select class="item" >
+                                                    <option>00분</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <label class="con-inner ip-con-lb flex flex-jfs flex-ac">
+                                            <input class="item" type="checkbox" name="" value="0"/>
+                                            <span class="ip-txt">검사 중에도 종료 시간이 지나면 시험을 종료합니다.</span>
+                                        </label>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-ac">
+                                    <div class="lb-txt flex flex-ac">
+                                        응시자 로그인 조합 설정
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <select class="item" >
+                                            <option>선택</option>
+                                        </select>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap">
+                                <label class="ip-lb flex flex-afs">
+                                    <div class="lb-txt flex flex-ac">
+                                        응시자 비밀번호 조합 설정
+                                    </div>
+                                    <div class="ip-content">
+                                        <div class="con-inner flex flex-ac flex-g20">
+                                            <select class="item" >
+                                                <option>선택</option>
+                                            </select>
+                                            <span class="plus-txt">+</span>
+                                            <select class="item" >
+                                                <option>선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="con-inner desc">
+                                            ※ 예시) 수험번호+성명 선택 시 ‘2401홍길동’으로 설정됨
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap hidden">
+                                <label class="ip-lb flex flex-afs">
+                                    <div class="lb-txt flex flex-ac">
+                                        로그인 시간
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <select class="item" >
+                                            <option>선택</option>
+                                        </select>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-wrap hidden">
+                                <label class="ip-lb flex flex-afs">
+                                    <div class="lb-txt flex flex-ac">
+                                        휴식 시간 설정 (분)
+                                    </div>
+                                    <div class="ip-content flex flex-jfs flex-ac">
+                                        <input class="item w240" type="text" name="" placeholder="분 단위로 입력해 주세요"/>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-btn-wrap flex flex-ac flex-jr">
+                            <button type="submit" id="submit-btn" class="submit-btn submit-btn btn">
+                                생성
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
-
 </main>
 <!-- 실행 스크립트 -->
 <script src="assets/js/ui.js"></script>

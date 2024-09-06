@@ -874,6 +874,106 @@ tag.new:hover {
 }
 
 
+/* select test */
+.tab-wrap .tab-btn {
+    height:48px;
+    max-width: 128px;
+    font-size:18px;
+    font-weight: bold;
+    color:#707070;
+    box-sizing: border-box;
+}
+.tab-wrap .tab-btn.active {
+    border-bottom:2px solid #3B68D7;
+    color:#3B68D7;
+}
+.create-test-wrap {
+    padding:40px 30px;
+    background: #fff;
+}
+.create-test-wrap .title {
+    padding:0 0 12px 0;
+    line-height: 1.46;
+    font-size:24px;
+    font-weight: bold;
+    border-bottom:1px solid #DBDBDB;
+}
+.create-test-wrap .add-txt {
+    padding:8px 0 0 0;
+    color:#707070;
+    font-size:14px;
+}
+.create-test-wrap .form-wrap {
+    padding:28px 0 0 0;
+}
+.create-test-wrap .input-wrap:not(:last-child) {
+    margin:0 auto 28px;
+}
+.create-test-wrap .input-wrap input[type="text"] {
+    height: 40px;
+}
+.create-test-wrap .input-wrap input[type="date"] {
+    height: 40px;
+}
+.create-test-wrap .input-wrap .ip-lb {
+    gap:8px;
+}
+.create-test-wrap .input-wrap .lb-txt {
+    padding:0 0 0 8px;
+    width:180px;
+    height:40px;
+}
+.create-test-wrap .input-wrap .ip-content.flex {
+    gap:20px;
+}
+.create-test-wrap .input-wrap .ip-content {
+    width:calc(100% - 180px);
+}
+.create-test-wrap .input-wrap .ip-content .ip-con-lb {
+    gap:8px;
+}
+.create-test-wrap .input-wrap .ip-content .con-inner {
+    width:100%;
+}
+.create-test-wrap .input-wrap .ip-content .con-inner .plus-txt {
+    font-size:24px;
+    font-weight: bold;
+}
+.create-test-wrap .input-wrap .ip-content .con-inner.desc {
+    padding:4px 0;
+    color:#707070;
+    font-size:16px;
+}
+.create-test-wrap .form-btn-wrap {
+    gap:16px;
+    margin:60px auto 0;
+}
+.create-test-wrap .form-btn-wrap .submit-btn {
+    width:80px;
+    height:40px;
+    background: #3B68D7;
+    border-radius: 4px;
+    font-size:16px;
+    color:#fff;
+}
+.create-test-wrap .form-btn-wrap .submit-btn:hover {
+    background: #0F205C;
+}
+.create-test-wrap .form-btn-wrap .save-btn {
+    width:80px;
+    height:40px;
+    background: #fff;
+    border-radius: 4px;
+    border:1px solid #3B68D7;
+    font-size:16px;
+    color:#3B68D7;
+}
+.create-test-wrap .form-btn-wrap .save-btn:hover {
+    text-decoration: unset;
+    color:#000;
+    background: #DBDBDB;
+}
+
 
 /* policy page */
 .sub-policy1-sec {
